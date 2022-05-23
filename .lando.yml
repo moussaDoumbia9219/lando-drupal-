@@ -1,0 +1,34 @@
+name: my_sites
+recipe: drupal8
+config:
+  webroot: web
+proxy:
+  appserver:
+    - site1.lndo.site
+    - sub.site1.lndo.site
+    - site2.lndo.site
+services:
+  site1:
+    type: mysql:5.7
+    creds:
+      user: mysite
+      password: mysite
+      database: mysite
+  subsite1:
+    type: mysql:5.7
+    creds:
+      user: mysite
+      password: mysite
+      database: mysite
+  site2:
+    type: mysql:5.7
+    creds:
+      user: mysite
+      password: mysite
+      database: mysite
+  site2child:
+    type: mysql:5.7
+    creds:
+      user: mysite
+      password: mysite
+      database: mysite
